@@ -1,0 +1,135 @@
+.app-body {
+    background-color: #cebc75;
+}
+.cards {
+    background-color: #f0e4b2;
+    padding: 1.8rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 25vw;
+}
+@media only screen and (max-width: 850px){
+    .cards {
+        min-width: 60vw;
+    }
+    #actors {
+        margin-bottom: 2rem;
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.general-button {
+    cursor: pointer;
+}
+.general-button:active {
+    background-color: darkgray;
+}
+.search-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    padding: 2rem;
+    gap: 2rem;
+}
+.search-area input, button {
+    font-size: 2rem;
+    margin: 0;
+    border: 0;
+}
+
+.search-area input {
+    outline: none;
+    width: 20vw;
+}
+.searchbar input::placeholder {
+    text-align: center;
+}
+.reset {
+    border-radius: 20px;
+    border: 1px solid black;
+}
+@media only screen and (max-width: 850px) {
+    .search-area input {
+        width: 35vw;
+        font-size: 2rem;
+    }
+    .search-area button {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .search-area input {
+        width: 35vw;
+        font-size: 1.5rem;
+    }
+    .search-area button {
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (max-width: 300px) {
+    .search-area input {
+        width: 30vw;
+        font-size: 1rem;
+    }
+    .search-area button {
+        font-size: 1rem;
+    }
+}
+.favorite-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+} 
+
+@keyframes higligth {
+    0% {
+        background-color: #f0e4b2;
+    }
+    50% {
+        background-color: black;
+    }
+    100% {
+        background-color: #f0e4b2;
+    }
+}
+.favorite-item {
+    text-align: center;
+    width: 100%;
+    padding: 0.4rem;
+    animation: higligth 1s 1;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #f0e4b2;
+    border-bottom: 1px solid black;
+}
+
+header h2 {
+    font-family: 'Rubik Bubbles';
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 300px){
+    header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.highlight {
+    color: red;
+}
+
+.logo {
+    width: 5.5rem;
+    height: auto;
+}

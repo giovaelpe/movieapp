@@ -1,0 +1,22 @@
+.movie-result h2, h3 {
+    text-align: center;
+}
+
+.movie-result h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+
+.movie-result li {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.plus-button {
+    background-color: #f0e4b2;
+}
