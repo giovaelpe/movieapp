@@ -19,6 +19,8 @@ class App extends React.Component {
     this.onMovieAdd = this.onMovieAdd.bind(this);
     this.onSearch = this.onSearch.bind(this);
     this.reset = this.reset.bind(this);
+    this.onMovieRemove = this.onMovieRemove.bind(this);
+    this.onActorRemove = this.onActorRemove.bind(this);
   }
 
   async onSearch(movie) {
@@ -62,6 +64,29 @@ class App extends React.Component {
       movieList: temp
     })
   }
+
+  onMovieRemove(index){
+    let nMovies = [];
+    this.state.movieList.forEach((item, i) => {
+      if(index !== i){
+        nMovies.push(item);
+      }
+    })
+    this.setState({
+      movieList : nMovies
+    })
+  }
+  onActorRemove(index){
+    let nActors = [];
+    this.state.actorList.forEach((item, i) => {
+      if(index !== i){
+        nActors.push(item);
+      }
+    })
+    this.setState( {
+      actorList : nActors
+    })
+  }
   reset() {
     this.setState({
       movieList: [],
@@ -86,8 +111,8 @@ class App extends React.Component {
           <section className='card-container'>
             <Movie onActoradd={this.onActoradd} onMovieAdd={this.onMovieAdd} onActorAdd={this.onActorAdd} movieIsLoad={this.state.movieIsLoad}
               movieTitle={this.state.movieTitle} actors={this.state.actors} />
-            <Customlist id="movies" listContent={this.state.movieList} >Favorite Movies</Customlist>
-            <Customlist id="actors" listContent={this.state.actorList}>Favorite Actors</Customlist>
+            <Customlist id="movies" listContent={this.state.movieList} onMovieRemove={this.onMovieRemove} >Favorite Movies</Customlist>
+            <Customlist id="actors" listContent={this.state.actorList} onActorRemove={this.onActorRemove}>Favorite Actors</Customlist>
           </section>
         </div>
       </main>
